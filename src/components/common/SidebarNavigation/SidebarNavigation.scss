@@ -1,0 +1,36 @@
+.SidebarNavigation {
+  &_wrapper {
+    width: 100%;
+  }
+  &_item {
+    font-size: 17px;
+    display: flex;
+    margin: 5px 0;
+    &_button {
+      box-sizing: border-box;
+      padding: 11px 20px;
+      cursor: pointer;
+      transition: all 0.15s ease;
+      border-radius: 24px;
+      border: 2px solid transparent;
+      &:hover {
+        border-color: #d9d9d9;
+      }
+      &:active {
+        transform: scaleY(1.05) scaleX(1.05);
+      }
+      &.active {
+        border-color: #fc0;
+        background: #fc0;
+        transform: scaleY(1.05) scaleX(1.05);
+        cursor: default;
+      }
+      &.disabled {
+        cursor: default;
+        opacity: 0.4;
+        pointer-events: none;
+        text-decoration: line-through;
+      }
+    }
+  }
+}
